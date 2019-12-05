@@ -51,7 +51,9 @@ class APODActivity : AppCompatActivity() {
 
         ivAPOD.layoutParams.height = screenHeight/2
 
-        tvAPODDate.text = it.date
+
+
+
         tvAPODTitle.text = it.title
         tvAPODExplanation.text = '"'+it.explanation+'"'
 
