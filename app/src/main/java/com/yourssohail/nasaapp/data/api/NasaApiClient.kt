@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 
-const val API_KEY = "BW9QVZwzvHXB401BFnrbldLYSMfQaSxOxngvR7kN"
+const val API_KEY = "wdtIMsbQoTq4QKPODGw9g0yxEdRqfLEIMFFuRrCw"
 const val BASE_URL = "https://api.nasa.gov/"
 
 class NasaApiClient {

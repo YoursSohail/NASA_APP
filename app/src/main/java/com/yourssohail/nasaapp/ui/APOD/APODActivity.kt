@@ -43,12 +43,19 @@ class APODActivity : AppCompatActivity() {
     }
 
     private fun bindUI(it: APODData) {
-        tvAPODDate.text = it.date.toString()
-        tvAPODTitle.text = it.title.toString()
-        tvAPODExplanation.text = it.explanation.toString()
+
+        val screenHeight : Int = windowManager.defaultDisplay.height
+
+        ivAPOD.layoutParams.height = screenHeight/2
+
+        tvAPODDate.text = it.date
+        tvAPODTitle.text = it.title
+        tvAPODExplanation.text = '"'+it.explanation+'"'
 
         Glide.with(this)
             .load(it.url)
+            .centerCrop()
+            .placeholder(R.drawable.nasa_bw_logo)
             .into(ivAPOD)
 
     }
