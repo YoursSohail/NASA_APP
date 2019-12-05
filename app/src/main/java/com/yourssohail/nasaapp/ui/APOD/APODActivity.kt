@@ -1,5 +1,8 @@
 package com.yourssohail.nasaapp.ui.APOD
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -70,4 +73,6 @@ class APODActivity : AppCompatActivity() {
         })[APODViewModel::class.java]
 
     }
+
+
 }

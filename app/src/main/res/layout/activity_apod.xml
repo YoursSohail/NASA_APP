@@ -20,6 +20,7 @@
     <TextView
         android:id="@+id/tvAPODError"
         tools:text = "Sorry ! Something went wrong"
+        android:text="Sorry ! Something went wrong"
         android:gravity="center"
         android:visibility="gone"
         android:textSize="20sp"
