@@ -49,13 +49,14 @@ class APODActivity : AppCompatActivity() {
 
         val screenHeight : Int = windowManager.defaultDisplay.height
 
-        ivAPOD.layoutParams.height = screenHeight/2
+        ivAPOD.layoutParams.height = screenHeight/3
 
 
 
 
-        tvAPODTitle.text = it.title
-        tvAPODExplanation.text = '"'+it.explanation+'"'
+        tvAPODTitle.text = "Picture of the day \n["+it.title+"]"
+        tvAPODExplanation.text = '"'+it.explanation+'"'+"\n- "+it.copyright
+
 
         Glide.with(this)
             .load(it.url)
