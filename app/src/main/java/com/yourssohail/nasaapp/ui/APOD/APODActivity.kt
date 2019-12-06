@@ -1,11 +1,13 @@
 package com.yourssohail.nasaapp.ui.APOD
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -17,8 +19,10 @@ import com.yourssohail.nasaapp.data.api.NasaApiInterface
 import com.yourssohail.nasaapp.data.model.APODData
 import com.yourssohail.nasaapp.data.repository.APODDataSource
 import com.yourssohail.nasaapp.data.repository.NetworkState
+import com.yourssohail.nasaapp.ui.Search.SearchActivity
 import io.reactivex.Single
 import kotlinx.android.synthetic.main.activity_apod.*
+import kotlinx.android.synthetic.main.activity_apod.view.*
 
 class APODActivity : AppCompatActivity() {
 
@@ -51,7 +55,13 @@ class APODActivity : AppCompatActivity() {
 
         ivAPOD.layoutParams.height = screenHeight/3
 
-
+        btSearch.setOnClickListener {
+            val searchText : String = etSearch.text.toString()
+            if(searchText.trim().isEmpty()){
+                Toast.makeText(this,"Entry your exploration first",Toast.LENGTH_SHORT).show()
+            }else
+            startActivity(Intent(this,SearchActivity::class.java))
+        }
 
 
         tvAPODTitle.text = "Picture of the day \n["+it.title+"]"

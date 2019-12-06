@@ -65,6 +65,7 @@
         android:gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textColor="@color/colorPrimaryDark"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:layout_marginStart="4dp"
         android:textStyle="bold"
