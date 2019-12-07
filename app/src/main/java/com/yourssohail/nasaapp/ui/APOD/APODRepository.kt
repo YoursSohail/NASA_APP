@@ -1,14 +1,14 @@
 package com.yourssohail.nasaapp.ui.APOD
 
 import androidx.lifecycle.LiveData
-import com.yourssohail.nasaapp.data.api.NasaApiInterface
+import com.yourssohail.nasaapp.data.api.apod_api.ApodApiInterface
 import com.yourssohail.nasaapp.data.model.APODData
 import com.yourssohail.nasaapp.data.repository.APODDataSource
 import com.yourssohail.nasaapp.data.repository.NetworkState
 import io.reactivex.disposables.CompositeDisposable
 
 class APODRepository(
-    private val apiService: NasaApiInterface
+    private val apiService: ApodApiInterface
 ) {
 
     lateinit var apodDataSource: APODDataSource

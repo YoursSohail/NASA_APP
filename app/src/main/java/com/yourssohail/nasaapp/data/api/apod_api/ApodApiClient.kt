@@ -1,4 +1,4 @@
-package com.yourssohail.nasaapp.data.api
+package com.yourssohail.nasaapp.data.api.apod_api
 
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -13,7 +13,7 @@ const val BASE_URL = "https://api.nasa.gov/"
 
 class NasaApiClient {
 
-    fun getClient():NasaApiInterface{
+    fun getClient(): ApodApiInterface {
 
        val requestInterceptor = Interceptor{chain ->
 
@@ -43,7 +43,7 @@ class NasaApiClient {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(NasaApiInterface::class.java)
+            .create(ApodApiInterface::class.java)
 
 
     }

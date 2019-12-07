@@ -3,14 +3,14 @@ package com.yourssohail.nasaapp.data.repository
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.yourssohail.nasaapp.data.api.NasaApiInterface
+import com.yourssohail.nasaapp.data.api.apod_api.ApodApiInterface
 import com.yourssohail.nasaapp.data.model.APODData
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import java.lang.Exception
 
 class APODDataSource(
-    private val apiService : NasaApiInterface,
+    private val apiService : ApodApiInterface,
     private val compositeDisposable: CompositeDisposable
 ) {
 

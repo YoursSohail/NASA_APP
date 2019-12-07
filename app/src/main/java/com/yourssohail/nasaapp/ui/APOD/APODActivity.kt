@@ -1,9 +1,6 @@
 package com.yourssohail.nasaapp.ui.APOD
 
-import android.content.Context
 import android.content.Intent
-import android.net.ConnectivityManager
-import android.net.NetworkInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -14,15 +11,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import com.yourssohail.nasaapp.R
-import com.yourssohail.nasaapp.data.api.NasaApiClient
-import com.yourssohail.nasaapp.data.api.NasaApiInterface
+import com.yourssohail.nasaapp.data.api.apod_api.NasaApiClient
+import com.yourssohail.nasaapp.data.api.apod_api.ApodApiInterface
 import com.yourssohail.nasaapp.data.model.APODData
-import com.yourssohail.nasaapp.data.repository.APODDataSource
 import com.yourssohail.nasaapp.data.repository.NetworkState
 import com.yourssohail.nasaapp.ui.Search.SearchActivity
-import io.reactivex.Single
 import kotlinx.android.synthetic.main.activity_apod.*
-import kotlinx.android.synthetic.main.activity_apod.view.*
 
 class APODActivity : AppCompatActivity() {
 
@@ -33,7 +27,8 @@ class APODActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_apod)
 
-        val apiService : NasaApiInterface = NasaApiClient().getClient()
+        val apiService : ApodApiInterface = NasaApiClient()
+            .getClient()
         apodRepository = APODRepository(apiService)
 
         apodViewModel = getViewModel()
