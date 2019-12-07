@@ -3,7 +3,7 @@ package com.yourssohail.nasaapp.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class APODData(
+data class ApodData(
     @SerializedName("copyright")
     val copyright: String,
     @SerializedName("date")

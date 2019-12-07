@@ -13,15 +13,15 @@ import com.bumptech.glide.Glide
 import com.yourssohail.nasaapp.R
 import com.yourssohail.nasaapp.data.api.apod_api.NasaApiClient
 import com.yourssohail.nasaapp.data.api.apod_api.ApodApiInterface
-import com.yourssohail.nasaapp.data.model.APODData
+import com.yourssohail.nasaapp.data.model.ApodData
 import com.yourssohail.nasaapp.data.repository.NetworkState
 import com.yourssohail.nasaapp.ui.search.SearchActivity
 import kotlinx.android.synthetic.main.activity_apod.*
 
-class APODActivity : AppCompatActivity() {
+class ApodActivity : AppCompatActivity() {
 
-    lateinit var apodViewModel: APODViewModel
-    lateinit var apodRepository: APODRepository
+    lateinit var apodViewModel: ApodViewModel
+    lateinit var apodRepository: ApodRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +29,7 @@ class APODActivity : AppCompatActivity() {
 
         val apiService : ApodApiInterface = NasaApiClient()
             .getClient()
-        apodRepository = APODRepository(apiService)
+        apodRepository = ApodRepository(apiService)
 
         apodViewModel = getViewModel()
 
@@ -44,7 +44,7 @@ class APODActivity : AppCompatActivity() {
 
     }
 
-    private fun bindUI(it: APODData) {
+    private fun bindUI(it: ApodData) {
 
         val screenHeight : Int = windowManager.defaultDisplay.height
 
@@ -71,14 +71,14 @@ class APODActivity : AppCompatActivity() {
 
     }
 
-    private fun getViewModel() :APODViewModel{
+    private fun getViewModel() :ApodViewModel{
 
         return ViewModelProviders.of(this,object:ViewModelProvider.Factory{
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
                 @Suppress("UNCHECKED_CAST")
-                return APODViewModel(apodRepository) as T
+                return ApodViewModel(apodRepository) as T
             }
-        })[APODViewModel::class.java]
+        })[ApodViewModel::class.java]
 
     }
 

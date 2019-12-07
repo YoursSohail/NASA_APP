@@ -4,12 +4,12 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.yourssohail.nasaapp.data.api.apod_api.ApodApiInterface
-import com.yourssohail.nasaapp.data.model.APODData
+import com.yourssohail.nasaapp.data.model.ApodData
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import java.lang.Exception
 
-class APODDataSource(
+class ApodDataSource(
     private val apiService : ApodApiInterface,
     private val compositeDisposable: CompositeDisposable
 ) {
@@ -18,8 +18,8 @@ class APODDataSource(
     val networkState : LiveData<NetworkState>
     get() = _networkState
 
-    private val _apodData = MutableLiveData<APODData>()
-    val apodData : LiveData<APODData>
+    private val _apodData = MutableLiveData<ApodData>()
+    val apodData : LiveData<ApodData>
     get() = _apodData
 
     fun fetchAPOD(){
@@ -36,11 +36,11 @@ class APODDataSource(
                         },
                         {
                             _networkState.postValue(NetworkState.ERROR)
-                            Log.e("APODDataSource",it.message)
+                            Log.e("ApodDataSource",it.message)
                         }
                     ))
         }catch (e:Exception){
-            Log.e("APODDataSource",e.message)
+            Log.e("ApodDataSource",e.message)
         }
     }
 }

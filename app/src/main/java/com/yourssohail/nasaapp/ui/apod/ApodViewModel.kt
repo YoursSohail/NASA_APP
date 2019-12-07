@@ -2,17 +2,17 @@ package com.yourssohail.nasaapp.ui.apod
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.yourssohail.nasaapp.data.model.APODData
+import com.yourssohail.nasaapp.data.model.ApodData
 import com.yourssohail.nasaapp.data.repository.NetworkState
 import io.reactivex.disposables.CompositeDisposable
 
-class APODViewModel(
-    private val apodRepository: APODRepository
+class ApodViewModel(
+    private val apodRepository: ApodRepository
 ) : ViewModel() {
 
     private val compositeDisposable = CompositeDisposable()
 
-    val apodData : LiveData<APODData> by lazy {
+    val apodData : LiveData<ApodData> by lazy {
         apodRepository.getAPOD(compositeDisposable)
     }
 
