@@ -1,4 +1,4 @@
-package com.yourssohail.nasaapp.ui.APOD
+package com.yourssohail.nasaapp.ui.apod
 
 import androidx.lifecycle.LiveData
 import com.yourssohail.nasaapp.data.api.apod_api.ApodApiInterface

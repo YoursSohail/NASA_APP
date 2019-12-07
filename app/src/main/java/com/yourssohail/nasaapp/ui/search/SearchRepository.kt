@@ -1,4 +1,4 @@
-package com.yourssohail.nasaapp.ui.Search
+package com.yourssohail.nasaapp.ui.search
 
 import androidx.lifecycle.LiveData
 import com.yourssohail.nasaapp.data.api.search_api.SearchApiInterface

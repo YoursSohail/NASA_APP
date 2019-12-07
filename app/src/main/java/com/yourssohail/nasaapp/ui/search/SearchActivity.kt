@@ -1,4 +1,4 @@
-package com.yourssohail.nasaapp.ui.Search
+package com.yourssohail.nasaapp.ui.search
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.yourssohail.nasaapp.ui.APOD
+package com.yourssohail.nasaapp.ui.apod
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +15,7 @@ import com.yourssohail.nasaapp.data.api.apod_api.NasaApiClient
 import com.yourssohail.nasaapp.data.api.apod_api.ApodApiInterface
 import com.yourssohail.nasaapp.data.model.APODData
 import com.yourssohail.nasaapp.data.repository.NetworkState
-import com.yourssohail.nasaapp.ui.Search.SearchActivity
+import com.yourssohail.nasaapp.ui.search.SearchActivity
 import kotlinx.android.synthetic.main.activity_apod.*
 
 class APODActivity : AppCompatActivity() {
