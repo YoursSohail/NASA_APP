@@ -25,10 +25,13 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-       val queryString : String? = intent.getStringExtra("q")
+       val queryString : String = intent?.getStringExtra("q").toString()
        val apiService : SearchApiInterface = SearchApiClient().getClient()
 
+        Log.d("queryString",queryString)
+
         searchRepository = SearchRepository(apiService)
+
 
         viewModel = getViewModel(queryString)
 
@@ -49,7 +52,7 @@ class SearchActivity : AppCompatActivity() {
 
     }
 
-    private fun getViewModel(queryString: String?): SearchViewModel {
+    private fun getViewModel(queryString: String): SearchViewModel {
 
         Log.d("query",queryString)
 

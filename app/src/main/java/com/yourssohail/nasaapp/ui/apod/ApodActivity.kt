@@ -54,14 +54,13 @@ class ApodActivity : AppCompatActivity() {
         btSearch.setOnClickListener {
             val searchText : String = etSearch.text.toString()
             if(searchText.trim().isEmpty()){
-                Toast.makeText(this,"Entry your exploration first",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Enter your exploration first !",Toast.LENGTH_SHORT).show()
             }else{
                 Log.d("searchText",searchText)
-                val intent = Intent(this,SearchActivity::class.java)
+                val intent = Intent(this@ApodActivity,SearchActivity::class.java)
                 intent.putExtra("q",searchText)
                 startActivity(intent)
             }
-            startActivity(Intent(this,SearchActivity::class.java))
         }
 
 

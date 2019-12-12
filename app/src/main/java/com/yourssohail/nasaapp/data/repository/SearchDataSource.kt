@@ -22,7 +22,7 @@ class SearchDataSource(
     val searchData : LiveData<SearchData>
     get() = _searchDate
 
-    fun fetchSearchResults(q:String?){
+    fun fetchSearchResults(q:String){
         _networkState.postValue(NetworkState.LOADING)
 
 
