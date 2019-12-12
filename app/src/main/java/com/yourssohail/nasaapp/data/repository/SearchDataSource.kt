@@ -22,8 +22,9 @@ class SearchDataSource(
     val searchData : LiveData<SearchData>
     get() = _searchDate
 
-    fun fetchSearchResults(q:String){
+    fun fetchSearchResults(q:String?){
         _networkState.postValue(NetworkState.LOADING)
+
 
         try{
             compositeDisposable.add(
@@ -41,7 +42,7 @@ class SearchDataSource(
                     )
             )
         }catch (e:Exception){
-            Log.e("SearchDataSource",e.message)
+            Log.e("ExpSearchDataSource",e.message)
         }
     }
 

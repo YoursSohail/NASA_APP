@@ -12,7 +12,7 @@ class SearchRepository(
 ) {
     lateinit var searchDataSource : SearchDataSource
 
-    fun getSearchResults(compositeDisposable: CompositeDisposable,q:String):LiveData<SearchData>{
+    fun getSearchResults(compositeDisposable: CompositeDisposable,q:String?):LiveData<SearchData>{
 
         searchDataSource = SearchDataSource(apiService,compositeDisposable)
         searchDataSource.fetchSearchResults(q)

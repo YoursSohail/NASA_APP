@@ -3,6 +3,7 @@ package com.yourssohail.nasaapp.ui.apod
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -54,7 +55,12 @@ class ApodActivity : AppCompatActivity() {
             val searchText : String = etSearch.text.toString()
             if(searchText.trim().isEmpty()){
                 Toast.makeText(this,"Entry your exploration first",Toast.LENGTH_SHORT).show()
-            }else
+            }else{
+                Log.d("searchText",searchText)
+                val intent = Intent(this,SearchActivity::class.java)
+                intent.putExtra("q",searchText)
+                startActivity(intent)
+            }
             startActivity(Intent(this,SearchActivity::class.java))
         }
 
