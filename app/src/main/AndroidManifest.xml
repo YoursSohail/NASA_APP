@@ -13,9 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.search.SearchActivity"></activity>
-        <activity android:name=".ui.apod.ApodActivity">
+        <activity android:name=".ui.apod.ApodActivity"
+            android:parentActivityName=".ui.apod.ApodActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"
+                    />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

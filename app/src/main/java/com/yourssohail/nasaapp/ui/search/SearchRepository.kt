@@ -2,6 +2,8 @@ package com.yourssohail.nasaapp.ui.search
 
 import androidx.lifecycle.LiveData
 import com.yourssohail.nasaapp.data.api.search_api.SearchApiInterface
+import com.yourssohail.nasaapp.data.model.Collection
+import com.yourssohail.nasaapp.data.model.Data
 import com.yourssohail.nasaapp.data.model.SearchData
 import com.yourssohail.nasaapp.data.repository.NetworkState
 import com.yourssohail.nasaapp.data.repository.SearchDataSource

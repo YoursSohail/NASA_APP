@@ -3,6 +3,8 @@ package com.yourssohail.nasaapp.ui.search
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import com.yourssohail.nasaapp.data.model.Collection
+import com.yourssohail.nasaapp.data.model.Data
 import com.yourssohail.nasaapp.data.model.SearchData
 import com.yourssohail.nasaapp.data.repository.NetworkState
 import io.reactivex.disposables.CompositeDisposable

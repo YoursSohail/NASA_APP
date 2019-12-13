@@ -4,6 +4,8 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.yourssohail.nasaapp.data.api.search_api.SearchApiInterface
+import com.yourssohail.nasaapp.data.model.Collection
+import com.yourssohail.nasaapp.data.model.Data
 import com.yourssohail.nasaapp.data.model.SearchData
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers

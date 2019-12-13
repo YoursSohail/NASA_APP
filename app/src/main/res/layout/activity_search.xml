@@ -7,8 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.search.SearchActivity">
 
-    <TextView
-        android:id="@+id/temp_txt"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_result"
+        android:layout_margin="4dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
